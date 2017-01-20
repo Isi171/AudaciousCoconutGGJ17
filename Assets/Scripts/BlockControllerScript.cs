@@ -46,10 +46,10 @@ public class BlockControllerScript : MonoBehaviour {
 			// If it is in the wave area update the heigth
 			if (xDistance < hLimitDistance) {
 				if (moon.transform.position.y > 0) {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f;
+					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(0, 5, xDistance);
 					temp2.y = displacement;
 				} else {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f;
+					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(0, 5, xDistance);
 					temp2.y = displacement;				}		
 			} else {
 				temp2 = current.position;
@@ -78,6 +78,15 @@ public class BlockControllerScript : MonoBehaviour {
 				current.transform.position = temp2;
 			}
 		}
+	}
+
+	// Generates a Gaussian (suggested values [0, 5])
+	float getGaussianValue(float xpct, float vrnc, float x) {
+		float c = Mathf.Sqrt (vrnc);
+		float a = 1 / (c * Mathf.Sqrt (2 * Mathf.PI));
+		float b = xpct;
+
+		return a * Mathf.Exp (-1 * (x - b) * (x - b) / 2 * vrnc);
 	}
 
 }
