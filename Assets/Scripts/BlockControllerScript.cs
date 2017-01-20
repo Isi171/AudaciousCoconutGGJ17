@@ -20,6 +20,10 @@ public class BlockControllerScript : MonoBehaviour {
 	float maxDisplacement;
 	// Number of childrens
 	public int cCount;
+	// Gaussian parameters
+	public float xpctGauss = 0;
+	public float vrncGauss = 5;
+	public float normalizeGaussian = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -46,11 +50,12 @@ public class BlockControllerScript : MonoBehaviour {
 			// If it is in the wave area update the heigth
 			if (xDistance < hLimitDistance) {
 				if (moon.transform.position.y > 0) {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(0, 5, xDistance);
+					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
 					temp2.y = displacement;
 				} else {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(0, 5, xDistance);
-					temp2.y = displacement;				}		
+					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
+					temp2.y = displacement;				
+				}		
 			} else {
 				temp2 = current.position;
 				temp2.y = 0f;
@@ -90,3 +95,5 @@ public class BlockControllerScript : MonoBehaviour {
 	}
 
 }
+
+//	displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
