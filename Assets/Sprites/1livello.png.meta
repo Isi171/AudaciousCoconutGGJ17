@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: ccf20a3392e793c449769d9734b573bc
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1livello_0
+    21300002: 1livello_1
+    21300004: 1livello_2
+    21300006: 1livello_3
+    21300008: 1livello_4
+    21300010: 1livello_5
+    21300012: 1livello_6
+    21300014: 1livello_7
+    21300016: 1livello_8
+    21300018: 1livello_9
+    21300020: 1livello_10
+    21300022: 1livello_11
+    21300024: 1livello_12
+    21300026: 1livello_13
+    21300028: 1livello_14
+    21300030: 1livello_15
+    21300032: 1livello_16
+    21300034: 1livello_17
+    21300036: 1livello_18
+    21300038: 1livello_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 330
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1livello_0
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 3342
+        width: 150
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_1
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 3342
+        width: 360
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_2
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 3390
+        width: 170
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_3
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 3561
+        width: 176
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_4
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 3504
+        width: 140
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_5
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 3447
+        width: 70
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_6
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 3390
+        width: 106
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_7
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 2713
+        width: 115
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_8
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 2823
+        width: 659
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_9
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2713
+        width: 99
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_10
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2695
+        width: 57
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_11
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2714
+        width: 93
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_12
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 2590
+        width: 182
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_13
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 2644
+        width: 73
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_14
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 2595
+        width: 72
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_15
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 2464
+        width: 127
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 2428
+        width: 74
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_17
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 2335
+        width: 83
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_18
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 2275
+        width: 125
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1livello_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 327
+        width: 3818
+        height: 1499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
