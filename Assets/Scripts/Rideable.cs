@@ -60,7 +60,9 @@
 //		boundCharacter.Remove(other);
 //		other.GetComponent<MovementEngine>().addedForce = Vector2.zero;
 //		if (other.GetComponent<RobotMovement>())
-//			other.GetComponent<RobotMovement>().canJump = true; 
+//		{
+//			other.GetComponent<RobotMovement>().canJump = true;
+//		}
 //		other.transform.parent = null;
 //	}
 //
@@ -69,70 +71,6 @@
 //		foreach (GameObject go in boundCharacter)
 //		{
 //			go.GetComponent<MovementEngine>().addedForce = offset;
-//			//go.GetComponent<Rigidbody2D>().velocity += rigidbody.velocity;         
-//		}
-//	}
-//
-//	public void OnDeath()
-//	{
-//		foreach (PatrollerStopper ps in GetComponentsInChildren<PatrollerStopper>())
-//			ps.OnDeath(true);
-//
-//		foreach (GameObject other in boundCharacter)
-//		{        
-//			other.GetComponent<MovementEngine>().addedForce = Vector2.zero;
-//			other.GetComponent<GravityChangeable>().active = true;
-//			other.GetComponent<RobotMovement>().canJump = true;
-//			other.GetComponent<GravityChangeable>().SetGravity(GetComponent<GravityChangeable>().gravity);
-//			other.transform.parent = null;
-//		}
-//
-//		boundCharacter.Clear();
-//		GetComponent<Explodable>().Explosion();
-//		Destroy(gameObject); 
-//	}
-//
-//	public void OnTeleportEnter()
-//	{
-//		teleporting = true;
-//		foreach (PatrollerStopper ps in GetComponentsInChildren<PatrollerStopper>())
-//			ps.OnDeath(true);
-//		foreach (GameObject go in boundCharacter)
-//		{
-//			go.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-//			go.GetComponent<MovementEngine>().addedForce = Vector3.zero;
-//			go.GetComponent<GravityChangeable>().UnaffectGravity(); 
-//		}
-//	}
-//
-//	public void OnTeleportExit()
-//	{
-//		teleporting = false;
-//		foreach (PatrollerStopper ps in GetComponentsInChildren<PatrollerStopper>())
-//			ps.OnDeath(false);
-//		foreach (GameObject go in boundCharacter)
-//		{
-//			go.GetComponent<GravityChangeable>().SetGravity(GetComponent<GravityChangeable>().gravity);
-//		}
-//	}
-//
-//	public void OnRotation(bool finished, Gravity gravity = Gravity.Down)
-//	{
-//		if (!finished)
-//		{
-//			foreach (GameObject go in boundCharacter)
-//			{
-//				go.GetComponent<RobotMovement>().canJump = false; 
-//				go.GetComponent<GravityChangeable>().UnaffectGravity();
-//			}
-//		}
-//		else
-//		{
-//			foreach (GameObject go in boundCharacter)
-//			{
-//				go.GetComponent<RobotMovement>().canJump = true;
-//				go.GetComponent<GravityChangeable>().SetGravity(gravity);
-//			}
 //		}
 //	}
 //
@@ -157,5 +95,4 @@
 //		OnLanding();
 //		UnbindCharacter(go);       
 //	}
-//
 //}

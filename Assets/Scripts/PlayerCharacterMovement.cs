@@ -8,30 +8,56 @@ public class PlayerCharacterMovement : MonoBehaviour
 	public Transform guyCollisionChecker1;
 	public Transform guyCollisionChecker2;
 	public LayerMask whatIsGround;
+	public LayerMask whatIsWater;
+	public BoxCollider2D onGroundBoxCollider;
+	public BoxCollider2D inWaterBoxCollider;
 
-	float movementDirection;
-	Rigidbody2D rigidbody2d;
-	Vector2 forceVector;
-	bool isOnGround;
+	private float movementDirection;
+	private Rigidbody2D rigidbody2d;
+	private bool isOnGround;
+	private bool isInWater;
 
-	void Start()
+	private void Start()
 	{
 		rigidbody2d = GetComponent<Rigidbody2D>();
 	}
 
-	void Update()
+	private void Update()
 	{
 		movementDirection = Input.GetAxisRaw("Horizontal");
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{
+		//Horizontal movement
+		isInWater = Physics2D.OverlapArea(guyCollisionChecker1.position, guyCollisionChecker2.position, whatIsWater);
+		if (!isInWater)
+		{
+			ActivateGroundCollider();
+			rigidbody2d.velocity = new Vector2(movementDirection * movementForce, rigidbody2d.velocity.y);
+		}
+		else
+		{
+			ActivateWaterCollider();
+		}
+
+		//Jump
 		isOnGround = Physics2D.OverlapArea(guyCollisionChecker1.position, guyCollisionChecker2.position, whatIsGround);
-		forceVector = new Vector2(movementDirection * movementForce, rigidbody2d.velocity.y);
-		rigidbody2d.velocity = forceVector;
-		if (Input.GetButton("Jump") && isOnGround)
+		if (isOnGround && Input.GetButton("Jump"))
 		{
 			rigidbody2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 		}
+	}
+
+	private void ActivateGroundCollider()
+	{
+		onGroundBoxCollider.enabled = true;
+		inWaterBoxCollider.enabled = false;
+	}
+
+	private void ActivateWaterCollider()
+	{
+		onGroundBoxCollider.enabled = false;
+		inWaterBoxCollider.enabled = true;
 	}
 }
