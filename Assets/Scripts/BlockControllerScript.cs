@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BlockControllerScript : MonoBehaviour {
@@ -50,10 +50,10 @@ public class BlockControllerScript : MonoBehaviour {
 			// If it is in the wave area update the heigth
 			if (xDistance < hLimitDistance) {
 				if (moon.transform.position.y > 0) {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
+					displacement = normalization * moon.transform.position.y * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
 					temp2.y = displacement;
 				} else {
-					displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
+					displacement = normalization * moon.transform.position.y * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
 					temp2.y = displacement;				
 				}		
 			} else {
@@ -76,9 +76,9 @@ public class BlockControllerScript : MonoBehaviour {
 			// If it is in the wave area update the heigth
 			if (xDistance < hLimitDistance) {
 				if (moon.transform.position.y > 0) {
-					temp2.y += maxDisplacement;
+					// temp2.y += maxDisplacement;
 				} else {
-					temp2.y -= maxDisplacement;
+					// temp2.y -= maxDisplacement;
 				}
 				current.transform.position = temp2;
 			}
@@ -97,3 +97,4 @@ public class BlockControllerScript : MonoBehaviour {
 }
 
 //	displacement = xDistance / normalization * moon.transform.position.y * -1f * getGaussianValue(xpctGauss, vrncGauss, xDistance * normalizeGaussian);
+//	Default parameters: [1, 100, 0, 0, 1, 0.4]

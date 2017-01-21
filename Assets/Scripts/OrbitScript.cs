@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class OrbitScript : MonoBehaviour {
-    public float a, b, increment; 
-    private float x, y, t;
+    public float a, b, increment, t; 
+    private float x, y;
     private int rotationDirection;
 
 	// Use this for initialization

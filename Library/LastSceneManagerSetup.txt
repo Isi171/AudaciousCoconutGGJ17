@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/CharMovement1.unity
-=======
 - path: Assets/Scenes/Wave.unity
->>>>>>> c3bed1a0352f09fffa41921af1e342c16e2102c4
   isLoaded: 1
   isActive: 1

@@ -43,7 +43,7 @@ public class PlayerCharacterMovement : MonoBehaviour
 
 		//Jump
 		isOnGround = Physics2D.OverlapArea(guyCollisionChecker1.position, guyCollisionChecker2.position, whatIsGround);
-		if (isOnGround && Input.GetButton("Jump"))
+		if (isOnGround && Input.GetButton("Jump") && !isInWater)
 		{
 			rigidbody2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 		}
